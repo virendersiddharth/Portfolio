@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Navbar from "./components/common/commonComponents/Navbar";
-import Home from "./pages/Home";
+import HomePage from "./pages/HomePage";
 import Footer from "./components/common/commonComponents/Footer";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
 
 
       <Navbar theme={theme} setTheme={setTheme}/>
-      <Home/>
+      <HomePage/>
       <Footer/>
 
     </div>

@@ -20,7 +20,7 @@ const Navbar = ({theme, setTheme}) => {
 
     const [sideBarOpen, setSideBarOpen] = useState(false);
     
-
+    
     const changeTheme = () => {
         if(theme === "dark"){
             setTheme("light")

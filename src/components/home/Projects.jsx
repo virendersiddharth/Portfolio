@@ -4,7 +4,8 @@ import { useInView } from "react-intersection-observer";
 import { useDispatch, useSelector } from 'react-redux';
 import { setActiveSection } from '../../reducers/slices/navSlice';
 
-import {IoIosArrowForward, IoIosArrowBack} from 'react-icons/io';
+import {IoIosArrowForward, IoIosArrowBack, IoIosEye, IoMdShareAlt} from 'react-icons/io';
+import { FaGit, FaGithub } from "react-icons/fa";
 
 import Slider from "react-slick";
 
@@ -14,15 +15,63 @@ import studyNotion from "../../assets/projects/Modern Chair.png";
 const Project = [
   {
     image : "https://res.cloudinary.com/dhuy4ln71/image/upload/v1702916577/PortFolio_Projects/studyNotion_peecxb.png",
+    array : [
+      {
+        icon : <IoIosEye/>,
+        link : "https://studynotion-by-virender.vercel.app/",
+      },
+      {
+        icon : <FaGithub/>,
+        link : "https://github.com/virendersiddharth/StudyNotion-Hosting"
+      },
+      {
+        icon : <IoMdShareAlt/>
+      }
+    ]
   },
   {
     image : "https://res.cloudinary.com/dhuy4ln71/image/upload/v1702916572/PortFolio_Projects/Modern_Chair_la4dvf.png",
+    array : [
+      {
+        icon : <IoIosEye/>,
+        link : "https://modernchair-by-virender.vercel.app/"
+      },
+      {
+        icon : <FaGithub/>,
+        link : "https://github.com/virendersiddharth/Modern_Chair"
+      },
+      {
+        icon : <IoMdShareAlt/>
+      }
+    ]
   },
   {
     image : "https://res.cloudinary.com/dhuy4ln71/image/upload/v1702916577/PortFolio_Projects/studyNotion_peecxb.png",
+    array : [
+      {
+        icon : <IoIosEye/>,
+      },
+      {
+        icon : <FaGithub/>,
+      },
+      {
+        icon : <IoMdShareAlt/>
+      }
+    ]
   },
   {
     image : "https://res.cloudinary.com/dhuy4ln71/image/upload/v1702917477/PortFolio_Projects/WeatherApp_f18geg.png",
+    array : [
+      {
+        icon : <IoIosEye/>,
+      },
+      {
+        icon : <FaGithub/>,
+      },
+      {
+        icon : <IoMdShareAlt/>
+      }
+    ]
   },
 ]
 
@@ -95,13 +144,13 @@ const Projects = () => {
                 {
                     Project.map((el, index)=>(
 
-                        <div className='bg-[#4e5156] w-full p-[15px] h-[14rem] overflow-hidden rounded-[10px] relative group transition-all duration-200 ease-in-out'>
+                        <div className='bg-[#4e51569a] w-full p-[15px] h-[14rem] overflow-hidden rounded-[10px] relative group transition-all duration-200 ease-in-out'>
                             <div className='overflow-hidden rounded-[5px] h-full'>
                                 <img src={el.image} alt="" 
                                   className='group-hover:scale-[1.1] transition-all duration-200 ease-in-out'
                                 />
                             </div>
-                            <div className='text-white absolute top-[100%] p-[15px] left-0 w-full h-full backdrop-blur-[5px] flex flex-col justify-between
+                            <div className='text-white absolute top-[100%] p-[15px] left-0 w-full h-full bg-[#4e5156fd]  flex flex-col justify-between
                                 group-hover:top-0 transition-all duration-200 ease-in-out
                                 
                             '>
@@ -111,11 +160,11 @@ const Projects = () => {
                                 </div>
                                 <div className='flex items-center gap-5'>
                                     {
-                                        [0,1,2].map((el,i)=>(
-                                            <a href="" target='_blank'
-                                                className='p-3 bg-slate-600 w-[50px] aspect-square rounded-full'
+                                        el.array.map((icons,i)=>(
+                                            <a href={icons.link} target='_blank'
+                                                className='p-3 bg-white w-[50px] aspect-square rounded-full grid place-content-center text-black text-2xl'    
                                             >
-                                                el
+                                                {icons.icon}
                                             </a>
                                         ))
                                     }
