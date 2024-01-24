@@ -45,7 +45,7 @@ const Navbar = ({theme, setTheme}) => {
     
 
     <div className='mt-3 h-[4rem] flex items-center  w-full z-[900] fixed  bg-opacity-30 box-border'>
-        <div className='flex gap-4 justify-between items-center w-[95%] max-w-[1260px] mx-auto relative  py-[1.1rem] border-rich-black-200 border-2 px-6 rounded-3xl bg-white '>
+        <div className='flex gap-4 justify-between items-center w-[95%] max-w-[1260px] mx-auto relative py-[0.7rem] md:py-[1.1rem] border-rich-black-200 border-2 px-6 rounded-3xl bg-white '>
             <motion.div className='logo text-[1.5rem] leading-[2rem] font-semibold'
                 initial={hidden}
                 animate={show}                
