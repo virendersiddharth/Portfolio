@@ -7,7 +7,7 @@ import { setActiveSection } from '../../reducers/slices/navSlice';
 const About = () => {
 
     const [ref, inView] = useInView({
-        threshold:0.5
+        threshold: 1
     });
     const dispatch = useDispatch();
     const {timeOfLastClick} = useSelector((state)=> state.activeSec);
