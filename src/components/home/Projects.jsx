@@ -4,86 +4,24 @@ import { useInView } from "react-intersection-observer";
 import { useDispatch, useSelector } from 'react-redux';
 import { setActiveSection } from '../../reducers/slices/navSlice';
 
-import {IoIosArrowForward, IoIosArrowBack, IoIosEye, IoMdShareAlt} from 'react-icons/io';
-import { FaGit, FaGithub } from "react-icons/fa";
-
+import {IoIosArrowForward, IoIosArrowBack} from 'react-icons/io';
 import Slider from "react-slick";
 
-// import studyNotion from "../../assets/projects/studyNotion.png"
-import studyNotion from "../../assets/projects/Modern Chair.png";
-
-const Project = [
-  {
-    image : "https://res.cloudinary.com/dhuy4ln71/image/upload/v1702916577/PortFolio_Projects/studyNotion_peecxb.png",
-    array : [
-      {
-        icon : <IoIosEye/>,
-        link : "https://studynotion-by-virender.vercel.app/",
-      },
-      {
-        icon : <FaGithub/>,
-        link : "https://github.com/virendersiddharth/StudyNotion-Hosting"
-      },
-      {
-        icon : <IoMdShareAlt/>
-      }
-    ]
-  },
-  {
-    image : "https://res.cloudinary.com/dhuy4ln71/image/upload/v1702916572/PortFolio_Projects/Modern_Chair_la4dvf.png",
-    array : [
-      {
-        icon : <IoIosEye/>,
-        link : "https://modernchair-by-virender.vercel.app/"
-      },
-      {
-        icon : <FaGithub/>,
-        link : "https://github.com/virendersiddharth/Modern_Chair"
-      },
-      {
-        icon : <IoMdShareAlt/>
-      }
-    ]
-  },
-  {
-    image : "https://res.cloudinary.com/dhuy4ln71/image/upload/v1702916577/PortFolio_Projects/studyNotion_peecxb.png",
-    array : [
-      {
-        icon : <IoIosEye/>,
-      },
-      {
-        icon : <FaGithub/>,
-      },
-      {
-        icon : <IoMdShareAlt/>
-      }
-    ]
-  },
-  {
-    image : "https://res.cloudinary.com/dhuy4ln71/image/upload/v1702917477/PortFolio_Projects/WeatherApp_f18geg.png",
-    array : [
-      {
-        icon : <IoIosEye/>,
-      },
-      {
-        icon : <FaGithub/>,
-      },
-      {
-        icon : <IoMdShareAlt/>
-      }
-    ]
-  },
-]
+import { Project } from '../../data/Projects';
 
 const Projects = () => {
 
     var settings = {
         className: "center",
+        // loop: true,
         dots: true,
         centerMode: true,
         dots: false,
         infinite: true,
-    
+        // autoplay : true,
+        // autoplaySpeed : 2000,
+        cssEase: "linear",
+        pauseOnHover : true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -93,7 +31,7 @@ const Projects = () => {
           {
             breakpoint: 990,
             settings: {
-              slidesToShow: 3,
+              slidesToShow: 2,
               slidesToScroll: 1,
               infinite: true,
               dots: false,
@@ -143,34 +81,7 @@ const Projects = () => {
             <Slider {...settings} ref={arrowRef}>
                 {
                     Project.map((el, index)=>(
-
-                        <div className='bg-[#4e51569a] w-full p-[15px] h-[14rem] overflow-hidden rounded-[10px] relative group transition-all duration-200 ease-in-out'>
-                            <div className='overflow-hidden rounded-[5px] h-full'>
-                                <img src={el.image} alt="" 
-                                  className='group-hover:scale-[1.1] transition-all duration-200 ease-in-out'
-                                />
-                            </div>
-                            <div className='text-white absolute top-[100%] p-[15px] left-0 w-full h-full bg-[#4e5156fd]  flex flex-col justify-between
-                                group-hover:top-0 transition-all duration-200 ease-in-out
-                                
-                            '>
-                                <div>
-                                    <h2 className='text-xl text-white capitalize'>Project Name</h2>
-                                    <p>Project Desc</p>
-                                </div>
-                                <div className='flex items-center gap-5'>
-                                    {
-                                        el.array.map((icons,i)=>(
-                                            <a href={icons.link} target='_blank'
-                                                className='p-3 bg-white w-[50px] aspect-square rounded-full grid place-content-center text-black text-2xl'    
-                                            >
-                                                {icons.icon}
-                                            </a>
-                                        ))
-                                    }
-                                </div>
-                            </div>
-                        </div>
+                        <ProjectCard projectCard={el} key={index}/>
                     ))
                 }
                 
@@ -179,15 +90,49 @@ const Projects = () => {
             <div className='w-full flex justify-evenly'>
                 <button 
                 onClick={() => arrowRef.current.slickPrev()}
-                className='back bg-[#00000066] text-white p-2 text-xl rounded-full border-2 border-rich-purple-300'><IoIosArrowBack/></button>
+                className='back bg-[#d3d3d3] text-rich-black-500 p-2 text-xl rounded-full border-2 border-rich-purple-300'><IoIosArrowBack/></button>
                 <button 
                 onClick={() => arrowRef.current.slickNext()}
-                className='next bg-[#00000066] text-white p-2 text-xl rounded-full border-2 border-rich-purple-300'><IoIosArrowForward/></button>
+                className='next bg-[#d3d3d3] text-rich-black-500 p-2 text-xl rounded-full border-2 border-rich-purple-300'><IoIosArrowForward/></button>
             </div>
         
         </div>
 
     </section>
+  )
+}
+
+
+
+const ProjectCard = ({projectCard}) => {
+  return (
+  <div className='bg-[#d3d3d3] w-full p-[15px] h-[15rem] overflow-hidden rounded-[10px] relative group transition-all duration-200 ease-in-out '>
+    <div className='overflow-hidden rounded-[5px] h-full'>
+        <img src={projectCard.image} alt="" 
+          className='group-hover:scale-[1.1] transition-all duration-200 ease-in-out'
+        />
+    </div>
+    <div className=' absolute top-[100%] p-[15px] left-0 w-full h-full bg-[#f3f4f6] backdrop-blur-3xl  flex flex-col justify-between shadow-3dBox
+        group-hover:top-0 transition-all duration-200 ease-in-out
+        
+    '>
+        <div className='flex flex-col gap-2'>
+            <h2 className='text-2xl font-bold capitalize text-rich-black-950'>{projectCard.name}</h2>
+            <p className='font-medium text-rich-black-800'>{projectCard.description}</p>
+        </div>
+        <div className='flex items-center gap-5'>
+            {
+                projectCard.array.map((icons,i)=>(
+                    <a href={icons.link} target='_blank'
+                        className='p-3 bg-white w-[50px] aspect-square rounded-full grid place-content-center text-black text-2xl'    
+                    >
+                        {icons.icon}
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+  </div>
   )
 }
 

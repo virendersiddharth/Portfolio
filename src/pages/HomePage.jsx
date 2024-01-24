@@ -13,7 +13,7 @@ const HomePage = () => {
 
 
   return (
-    <div className='z-20 relative'>
+    <div className='z-20 relative w-full'>
 
 
         <Home/>

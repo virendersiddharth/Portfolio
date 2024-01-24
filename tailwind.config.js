@@ -47,6 +47,9 @@ module.exports = {
       // },
       fontFamily:{
         "Inter" : "Inter"
+      },
+      boxShadow: {
+        "3dBox" : "inset 7px 7px 14px #fbe2e3, inset -7px -7px 14px #dbd7fb;"
       }
       
     },

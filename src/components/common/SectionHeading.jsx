@@ -4,7 +4,7 @@ import React from 'react'
 const SectionHeading = ({text}) => {
   return (
     <h2
-    className='text-center'
+    className='text-center relative z-10'
 >
         <span
             className='heading'

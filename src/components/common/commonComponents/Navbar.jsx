@@ -1,9 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 import navLinks from '../../../data/NavLink'
-import { Link, matchPath, useLocation } from 'react-router-dom'
-import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs'
-import CTAButton from '../CTAButton'
 
 import { useAnimate, motion, stagger, delay } from 'framer-motion';
 import clsx from 'clsx'
@@ -49,14 +46,14 @@ const Navbar = ({theme, setTheme}) => {
 
     <div className='mt-3 h-[4rem] flex items-center  w-full z-[900] fixed  bg-opacity-30 box-border'>
         <div className='flex gap-4 justify-between items-center w-[95%] max-w-[1260px] mx-auto relative  py-[1.1rem] border-rich-black-200 border-2 px-6 rounded-3xl bg-white '>
-            <motion.div className='logo'
+            <motion.div className='logo text-[1.5rem] leading-[2rem] font-semibold'
                 initial={hidden}
                 animate={show}                
                 // animate={{:200}}
                 transition={{delay: 0.2, duration:0.7}}
                 // animate={{delay: stagger(0.2)}}
             >
-                Logo
+                Virender.
             </motion.div>
 
             <ul
