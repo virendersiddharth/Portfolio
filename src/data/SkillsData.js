@@ -2,6 +2,9 @@ import { SlDiamond } from 'react-icons/sl';
 import { BsLaptop } from 'react-icons/bs';
 import { GiGraduateCap } from 'react-icons/gi';
 
+import { FaLaptopCode } from "react-icons/fa";
+import { FaReact } from "react-icons/fa6";
+
 export const skills = [
     {
         id : 1,
@@ -74,11 +77,24 @@ export const skillsData = [
     "Framer Motion",
   ];
 
+// Experience Data
+
+
+
 export const experience = [
     {
         "heading" : "Front-end developer",
         "subHeading" : "Creative UI developer",
-        "desc" : "I'm a creative developer"
+        "desc" : "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+        "date" : "2022-2023",
+        "icon" : <FaLaptopCode />,
+    },
+    {
+        "heading" : "Mern Stack Developer",
+        "subHeading" : "Front-End & Back-End",
+        "desc" : "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+        "date" : "2023 - Present",
+        "icon" : <FaReact />,
     },
 
 ]

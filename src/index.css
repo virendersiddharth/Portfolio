@@ -89,30 +89,3 @@ img{
 
 
 
-/* Swiper */
-.slick-list, .slick-slider, .slick-track{
-  padding: 1.5rem 0;
-  width: 100%;
-  transition: all 0.4s ease-in;
-  margin: 0 auto;
-}
-
-@media screen and (max-width : 600px) {
-  .slick-list, .slick-slider, .slick-track{
-    padding: 0.5rem 0;
-  }
-}
-
-.slick-track{
-  /* width: 100%; */
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-}
-
-.slick-track .slick-center{
-  /* background: #000; */
-  /* scale: 1.2; */
-}
