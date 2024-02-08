@@ -4,7 +4,7 @@ import { FaGit, FaGithub } from "react-icons/fa";
 export const Project = [
     // StudyNotion
     {
-      image : "https://res.cloudinary.com/dhuy4ln71/image/upload/v1702916577/PortFolio_Projects/studyNotion_peecxb.png",
+      image : "https://res.cloudinary.com/developervihaan/image/upload/v1702916577/PortFolio_Projects/studyNotion_peecxb.png",
       name: "studyNotion",
       description : " StudyNotion is a fully functional ed-tech platform that enables users to create, consume, and rate educational content.",
       array : [
@@ -22,7 +22,7 @@ export const Project = [
 
     // Weather App
     {
-        image : "https://res.cloudinary.com/dhuy4ln71/image/upload/v1702917477/PortFolio_Projects/WeatherApp_f18geg.png",
+        image : "https://res.cloudinary.com/developervihaan/image/upload/v1702917477/PortFolio_Projects/WeatherApp_f18geg.png",
         name : "Weather App",
         description : "Weather app is a website that enables users to fetch the weather condition of any location with the help of REST API.",
         array : [
@@ -40,7 +40,7 @@ export const Project = [
 
     // Modern Chair
     {
-      image : "https://res.cloudinary.com/dhuy4ln71/image/upload/v1702916572/PortFolio_Projects/Modern_Chair_la4dvf.png",
+      image : "https://res.cloudinary.com/developervihaan/image/upload/v1702916572/PortFolio_Projects/Modern_Chair_la4dvf.png",
       name : "Modern Chair",
       description : "",
       array : [
@@ -57,7 +57,7 @@ export const Project = [
 
     // Discord Clone
     {
-      image : "https://res.cloudinary.com/dhuy4ln71/image/upload/v1706121328/PortFolio_Projects/layer_1_hdck9t.png",
+      image : "https://res.cloudinary.com/developervihaan/image/upload/v1706121328/PortFolio_Projects/layer_1_hdck9t.png",
       name : "Discord Clone",
       description : "Focus on frontend (UI) designing and make websites attractive with Animations.",
       array : [
@@ -74,7 +74,7 @@ export const Project = [
 
     // Razorpay
     {
-      image : "https://res.cloudinary.com/dhuy4ln71/image/upload/v1706121581/PortFolio_Projects/razorpay_kocsml.png",
+      image : "https://res.cloudinary.com/developervihaan/image/upload/v1706121581/PortFolio_Projects/razorpay_kocsml.png",
       name : "Razorpay Clone",
       description : "Focus on frontend (UI) designing and make websites attractive with Animations.",
       array : [

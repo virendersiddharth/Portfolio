@@ -10,7 +10,8 @@ const CTAButton = ({text, active, icon}) => {
             ${active ? "activeButton text-white" : ""}
         `}  
     >
-        <Link
+        <a
+            href='#contact'
             className='flex items-center justify-center gap-1 md:gap-2 px-4 py-2 min-w-[120px]'
         >
             {
@@ -18,7 +19,7 @@ const CTAButton = ({text, active, icon}) => {
               icon
             }
             {text}
-        </Link>
+        </a>
     </div>
   )
 }
