@@ -1,5 +1,5 @@
-import {IoIosEye, IoMdShareAlt} from 'react-icons/io';
-import { FaGit, FaGithub } from "react-icons/fa";
+import {IoIosEye} from 'react-icons/io';
+import { FaGithub } from "react-icons/fa";
 
 export const Project = [
     // StudyNotion

@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react'
 
-import AOS from 'aos';
-import "aos/dist/aos.css"
 
 import { useInView } from 'react-intersection-observer';
 
@@ -29,7 +27,7 @@ const Skills = () => {
   },[inView]);
 
   return (
-    <section ref={ref} className='relative z-10 w-full mt-10 md:mt-2 flex flex-col gap-8 mb-[4rem] scroll-m-20' id='skills'>
+    <section ref={ref} className='relative z-10 w-full flex flex-col scroll-m-20' id='skills'>
 
         {/* ===================================== Skills Heading ===================================== */}
         <SectionHeading text="Skills"/>
@@ -39,7 +37,7 @@ const Skills = () => {
             {
               skillsData.map((skill, index)=>(
                 <motion.li key={index}
-                  className='text-center border-2 border-black/[0.1] px-5 py-3 rounded-xl bg-white'
+                  className='text-center border-2 border-black/[0.1] px-5 py-3 rounded-xl bg-white dark:bg-transparent dark:border-[1.5px] dark:border-[rgba(255,255,255,0.32)] dark:text-rich-black-5'
                   initial="hidden"
                   whileInView="show"
                   variants={fadeIn("up", "ease", (0.05*index), 0.5)}

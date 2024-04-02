@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import SectionHeading from "../common/SectionHeading";
 import { useInView } from "react-intersection-observer";
 import { useDispatch, useSelector } from "react-redux";
@@ -40,7 +40,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section ref={ref} id="projects" className="scroll-mt-20 mt-10">
+    <section ref={ref} id="projects" className="scroll-mt-20 ">
       <SectionHeading text="Projects" />
 
       <div className="w-[95%] max-w-[1260px] mx-auto relative overflow-hidden mt-8">
@@ -68,19 +68,19 @@ const Projects = () => {
         >
           {Project.map((el, index) => (
             <SwiperSlide key={index}>
-              <ProjectCard projectCard={el} />
+              <ProjectCard projectCard={el}/>
             </SwiperSlide>
           ))}
 
           <div className="flex items-center justify-evenly mt-6 text-rich-black-600">
             <div
-              className="prev-arrow h-10 w-10  bg-rich-black-100 border-rich-purple-300 border-2  relative rounded-full grid place-content-center"
+              className="prev-arrow h-10 w-10  bg-rich-black-5 dark:text-white dark:bg-rich-black-700 border-rich-purple-300 dark:border-rich-black-600 border-2  relative rounded-full grid place-content-center"
               onClick={handlePrev}
             >
               <IoIosArrowBack size={20}/>
             </div>
             <div
-              className="next-arrow h-10 w-10 bg-rich-black-100 border-rich-purple-300 border-2 relative rounded-full grid place-content-center "
+              className="next-arrow h-10 w-10  bg-rich-black-5 dark:text-white dark:bg-rich-black-700 border-rich-purple-300 dark:border-rich-black-600 border-2  relative rounded-full grid place-content-center"
               onClick={handleNext}
             >
               <IoIosArrowForward size={20}/>
@@ -94,7 +94,7 @@ const Projects = () => {
 
 const ProjectCard = ({ projectCard }) => {
   return (
-    <div className="bg-[#d5d5d5] w-full p-[15px] h-[15rem] overflow-hidden rounded-[10px] relative group transition-all duration-200 ease-in-out ">
+    <div className="bg-[#d5d5d5] w-full p-[15px] h-[15rem] overflow-hidden rounded-[10px] relative group transition-all duration-200 ease-in-out dark:bg-[#181a1b] dark:border-[#353a3c] dark:border">
       <div className="overflow-hidden rounded-[5px] h-full">
         <img
           src={projectCard.image}
@@ -103,7 +103,7 @@ const ProjectCard = ({ projectCard }) => {
         />
       </div>
       <div
-        className=" absolute top-[100%] p-[15px] left-0 w-full h-full bg-[#f3f4f6] backdrop-blur-3xl  flex flex-col justify-between shadow-3dBox
+        className=" absolute top-[100%] p-[15px] left-0 w-full h-full bg-white dark:bg-transparent backdrop-blur-3xl  flex flex-col justify-between shadow-3dBox dark:shadow-none dark:text-rich-black-5
         group-hover:top-0 transition-all duration-200 ease-in-out
         
     "
@@ -112,7 +112,7 @@ const ProjectCard = ({ projectCard }) => {
           <h2 className="text-2xl font-bold capitalize text-rich-black-950">
             {projectCard.name}
           </h2>
-          <p className="font-medium text-rich-black-800">
+          <p className="font-medium text-rich-black-800d dark:text-rich-black-50">
             {projectCard.description}
           </p>
         </div>
@@ -121,7 +121,7 @@ const ProjectCard = ({ projectCard }) => {
             <a
               href={icons.link}
               target="_blank"
-              className="p-3 bg-white w-[50px] aspect-square rounded-full grid place-content-center text-black text-2xl"
+              className="p-3 bg-rich-black-5 dark:bg-rich-black-800 dark:border w-[50px] aspect-square rounded-full grid place-content-center text-black dark:text-rich-black-5 text-2xl"
             >
               {icons.icon}
             </a>

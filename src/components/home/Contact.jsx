@@ -22,16 +22,16 @@ const Contact = () => {
   }, [inView]);
 
   return (
-    <section ref={ref} id="contact" className="scroll-mt-20 mt-10">
+    <section ref={ref} id="contact" className="scroll-mt-20 dark:text-white">
       <SectionHeading text="Contact" />
       <div className="w-[95%] max-w-[1260px] my-4 mx-auto flex flex-col items-center gap-8">
-        <p className="mx-auto w-fit text-center">
-          Please contact me directly at{" "}
+        <p className="mx-auto w-fit text-center dark:text-rich-black-200">
+          Please contact me directly at {"  "}
           <a href="mailto:virendersiddhart24@gmail.com"
-            className="text-rich-purple-600"
+            className="text-rich-purple-600 dark:text-orange-400 px-1"
           >
             virendersiddharth24@gmail.com
-          </a>{" "}
+          </a>{"  "}
           or through this form.
         </p>
         <form action="" className="w-full max-w-[500px] flex flex-col  gap-2">
@@ -41,7 +41,9 @@ const Contact = () => {
               name=""
               id=""
               placeholder="Your Email"
-              className="w-full bg-none outline-none border-2 py-2 px-3 rounded-xl"
+              className="w-full bg-none outline-none border-2 py-2 px-3 rounded-xl
+                dark:bg-rich-black-900 dark:border-rich-black-700
+              "
             />
           </div>
           <div>
@@ -51,13 +53,15 @@ const Contact = () => {
               cols="30"
               rows="10"
               placeholder="Your Message"
-              className="w-full bg-none outline-none border-2 py-2 px-3 rounded-xl h-[200px] resize-none"
+              className="w-full bg-none outline-none border-2 py-2 px-3 rounded-xl h-[200px] resize-none 
+              dark:bg-rich-black-900 dark:border-rich-black-700"
             ></textarea>
           </div>
 
           <motion.button
             className="flex justify-center w-[120px] items-center gap-1
                     bg-rich-purple-700 text-white py-2 px-3 rounded-lg hover:bg-rich-purple-900 transition-all duration-200 group
+                    dark:bg-orange-500 hover:dark:bg-orange-900
                 "
             onClick={(e) => {
               e.preventDefault();

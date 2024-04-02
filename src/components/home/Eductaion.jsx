@@ -18,46 +18,93 @@ const Eductaion = () => {
 
   const { timeOfLastClick } = useSelector((state) => state.activeSec);
 
+  const currentTheme = localStorage.getItem("theme");
   useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > 1000) {
       dispatch(setActiveSection("experience"));
     }
   }, [inView]);
 
+  const followCurson = (e)=>{
+    // var moveTimer;
+    console.log(e);
+
+    const bg = document.getElementById("circleHover");
+    // clearTimeout(moveTimer);
+    console.log(edSection.getBoundingClientRect());
+
+    bg.style.left = `${e.clientX }px`;
+    bg.style.top = `${e.clientY - edSection.getBoundingClientRect().top}px`;
+
+    bg.style.opacity = 1;
+
+    // moveTimer = setTimeout(() => {
+    //   bg.style.opacity = 0;
+    // }, 2000);
+  }
+
+  const edSection = document.getElementById("educationSection");
+  if(edSection) {
+
+  edSection.addEventListener("mouseover", followCurson);
+  edSection.addEventListener("mousemove", followCurson);
+  edSection.addEventListener("mouseenter", followCurson);
+  // edSection.addEventListener("scroll", followCurson);
+  // edSection.addEventListener("mousedown", followCurson);
+
+  edSection.addEventListener("mouseleave",(e)=>{
+    const bg = document.getElementById("circleHover");
+    // bg.style.left = "-30px";
+    // bg.style.top = "-30px";
+    bg.style.opacity = 0;
+  })
+
+}
+
   return (
     <section ref={ref} className="relative w-full scroll-mt-20" id="experience">
       <SectionHeading text="Expericence" />
-      <div className="w-[95%] max-w-[1260px] mx-auto mt-6">
-        <VerticalTimeline className="w-full">
+      <div
+          id="educationSection" className="relative w-full py-8 overflow-hidden"
+      >
+
+        <div className="absolute dark:bg-hexagon bg-cover bg-no-repeat inset-0 z-[1]"></div>
+        <div id="circleHover" className="hidden md:dark:block absolute h-48 w-48 blur-lg bg-gradient-to-r from-[#335bf4] to-[#2ae9c9] opacity-0 translate-x-[-50%] translate-y-[-50%] z-0  "></div>
+
+      <div className=" w-[95%] max-w-[1260px] mx-auto mt-6 relative z-20">
+        <VerticalTimeline className="w-full" lineColor={`${currentTheme === "light"?"White": "#999daa"}` }>
           {experience.map((el, index) => (
-              <ExpericenceItem data={el} key={index}/>
+              <ExpericenceItem data={el} key={index} currentTheme={currentTheme}/>
           ))}
         </VerticalTimeline>
+      </div>
       </div>
     </section>
   )
 }
 
-const ExpericenceItem = ({data}) => {
+const ExpericenceItem = ({data, currentTheme}) => {
   return (
     <VerticalTimelineElement
-      className="vertical-timeline-element--work"
+      className="vertical-timeline-element--work dark:text-rich-black-5 "
       contentStyle={{
-        background: "#f3f4f6",
+        background: `${currentTheme === "light" ? "#f2f4f6" : "#000814"}`,
         boxShadow: "none",
-        border: "1px solid rgba(0,0,0,0.05)",
+        border: `1px solid ${currentTheme==="light"? "white" : "#161D29"}`,
         textAlign: "left",
         padding: "1.3rem 2rem",
-        //   color: "#fff",
+          // color: "#fff",
       }}
-      contentArrowStyle={{ borderRight: "0.5rem solid  #9ca3af" }}
+      contentArrowStyle={{ borderRight: `${currentTheme==="light"? "0.5rem solid  #9ca3af" : "0.5rem solid #999DAA"}` }}
       date={data.date}
-      iconStyle={{ background: "white", fontSize: "1.5rem", }}
+      iconStyle={{ background: `${currentTheme==="light"? "white" : "#000814"}`, fontSize: "1.5rem", 
+        border : "black"
+      }}
       icon={data.icon}
     >
-      <h3 className="font-semibold capitalize">{data.heading}</h3>
+      <h3 className="font-semibold dark:text-rich-black-5 capitalize">{data.heading}</h3>
       <h4 className="font-normal mt-0">{data.subHeading}</h4>
-      <p className="mt-1 text-gray-700">{data.desc}</p>
+      <p className="mt-1 text-gray-700 dark:text-rich-black-200">{data.desc}</p>
     </VerticalTimelineElement>
   )
 }

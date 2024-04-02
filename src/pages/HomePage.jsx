@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 
 import './Home.css';
@@ -13,7 +13,7 @@ const HomePage = () => {
 
 
   return (
-    <div className='z-20 relative w-full'>
+    <div className='z-20 relative w-full flex flex-col gap-20'>
 
 
         <Home/>

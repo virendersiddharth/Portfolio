@@ -24,17 +24,18 @@ module.exports = {
         "rich-purple-900" : "#37169c",
         "rich-purple-950" : "#200b6a",
 
-        "rich-black-50" : "#f6f7f9",
-        "rich-black-100" : "#edeef1",
-        "rich-black-200" : "#d6d9e1",
-        "rich-black-300" : "#b3b9c6",
-        "rich-black-400" : "#8993a7",
-        "rich-black-500" : "#6b768c",
-        "rich-black-600" : "#565e73",
-        "rich-black-700" : "#464c5e",
-        "rich-black-800" : "#363a45d9",
-        "rich-black-900" : "#3c4250",
-        "rich-black-950" : "#24262d",
+        "rich-black-5" : "#F1F2FF",
+        "rich-black-25" : "#DBDDEA",
+        "rich-black-50" : "#C5C7D4",
+        "rich-black-100" : "#AFB2BF",
+        "rich-black-200" : "#999DAA",
+        "rich-black-300" : "#838894",
+        "rich-black-400": "#6E727F",
+        "rich-black-500": "#585D69",
+        "rich-black-600": "#424854",
+        "rich-black-700": "#2C333F",
+        "rich-black-800": "#161D29",
+        "rich-black-900": "#000814",
         
       },
       // fontSize:{
@@ -50,6 +51,10 @@ module.exports = {
       },
       boxShadow: {
         "3dBox" : "inset 7px 7px 14px #fbe2e3, inset -7px -7px 14px #dbd7fb;"
+      },
+
+      backgroundImage:{
+        "hexagon": "url('/src/assets/bg/hexagon.svg')"
       }
       
     },
