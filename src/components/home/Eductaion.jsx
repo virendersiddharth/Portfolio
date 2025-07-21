@@ -63,9 +63,9 @@ const Eductaion = () => {
 
   return (
     <section ref={ref} className="relative w-full scroll-mt-20" id="experience">
-      <SectionHeading text="Expericence" />
+      <SectionHeading text="Experience" />
       <div
-          id="educationSection" className="relative w-full py-8 overflow-hidden"
+          id="education" className="relative w-full py-8 overflow-hidden"
       >
 
         <div className="absolute dark:bg-hexagon bg-cover bg-no-repeat inset-0 z-[1]"></div>
