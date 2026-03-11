@@ -24,8 +24,14 @@ const About = () => {
 
         <div className='w-[95%] max-w-[1260px] mx-auto text-[1.2rem] flex justify-between gap-5'>
             <div className='flex-1 flex justify-center flex-col font-Inter text-[18px]'>
-                <p className='leading-[1.8rem] tracking-wide text-center text-rich-black-700 font-medium dark:text-rich-black-50'>
-                    Pursuing graduation with a degree in BCA, I decided to pursue my passion for programming. I enrolled in a coding bootcamp and learned MERN - STACK web development. My favorite part of programming is the problem-solving aspect. I love the feeling of finally figuring out a solution to a problem. My core stack is React, ExpressJs, MongoDB and Data Structures & Algorithms. I am also familiar with C++, JavaScript and Java. I am always looking to learn new technologies. I am currently looking for a full-time position as a software developer.
+                <p className='leading-[2.2rem] tracking-wide text-center text-rich-black-700 font-medium dark:text-rich-black-50'>
+                    I'm a software developer currently working as an RPA Developer at Deloitte, where I design and build automation solutions that streamline business processes and improve operational efficiency.
+                
+                    Beyond automation, I have a strong interest in full-stack web development and enjoy building modern web applications using technologies such as React, Next.js, Node.js, Express, and MongoDB.
+
+                    I've built several full-stack projects that focus on clean architecture, responsive design, and scalable backend systems. These projects have helped me strengthen my understanding of modern web development practices and problem-solving.
+
+                    I'm passionate about building impactful software, continuously improving my development skills, and exploring opportunities where I can contribute as a Full Stack Web Developer.
                 </p>
             </div>
 

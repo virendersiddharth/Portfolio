@@ -58,23 +58,25 @@ export const skillsPrgressData = [
 export const skillsData = [
     "HTML",
     "CSS",
+    "Tailwind",
     "JavaScript",
-    "TypeScript",
     "React",
     "Next.js",
     "Node.js",
+    "Express.js",
+    "TypeScript",
     "Git",
-    "Tailwind",
     "Prisma",
     "MongoDB",
+    "SQL",
     "Redux",
-    "GraphQL",
-    "Apollo",
-    "Express",
     "PostgreSQL",
     "Python",
-    "Django",
+    "REST APIs",
     "Framer Motion",
+    "UIPath",
+    "Automation Anywhere",
+    "Blue Prism"
   ];
 
 // Experience Data
@@ -83,18 +85,10 @@ export const skillsData = [
 
 export const experience = [
     {
-        "heading" : "Front-end developer",
-        "subHeading" : "Creative UI developer",
-        "desc" : "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
-        "date" : "2022-2023",
+        "heading" : "Deloitte",
+        "subHeading" : "RPA Developer",
+        "desc" : `Develop and maintain automation solutions to streamline repetitive business processes and improve operational efficiency. Analyze business requirements and translate them into scalable automation workflows using industry-standard development practices. Implement error handling, logging, and debugging strategies to ensure reliable and maintainable automation solutions. Collaborate with cross-functional teams to identify automation opportunities and deliver solutions that reduce manual effort and improve productivity.`,
+        "date" : "2025-Present",
         "icon" : <FaLaptopCode />,
-    },
-    {
-        "heading" : "Mern Stack Developer",
-        "subHeading" : "Front-End & Back-End",
-        "desc" : "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
-        "date" : "2023 - Present",
-        "icon" : <FaReact />,
-    },
-
+    }
 ]

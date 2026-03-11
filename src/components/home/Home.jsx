@@ -117,7 +117,6 @@ const Home = () => {
         <motion.p
           className="text-rich-black-700 md:text-xl dark:text-rich-black-200"
           initial="hidden"
-          animate="show"
           variants={fadeIn("right", "ease", 2.2, 1)}
         >
           A creative web developer, specializing in website design. Checkout my
@@ -127,14 +126,14 @@ const Home = () => {
         {/* <div className='flex justify-start  gap-4'>
                     {
                         HomeIcons.map(icon => (
-                            <a key={icon.id} 
-                                className='w-[40px]'
-                            >
+                          <a key={icon.id} 
+                          className='w-[40px]'
+                          >
                                 <img src={icon.icon} alt="" />
                             </a>
-                        ))
+                            ))
                     }
-                </div> */}
+                    </div> */}
 
         <motion.div
           className="flex gap-2 md:gap-4 w-full justify-start mt-5"
@@ -147,7 +146,7 @@ const Home = () => {
             text="Get In Touch"
             active={true}
             icon={<BsStars size={19} />}
-          />
+            />
           {/* </div> */}
           {/* <div className='flex-1 max-w-fit'> */}
           <a
@@ -169,6 +168,7 @@ const Home = () => {
 
       <div className="hidden flex-1 max-w-[550px]  justify-end relative dark:hidden">
         {/* Diamond Icon */}
+            animate="show"
         <motion.div
           className="absolute z-0 w-[30%] circleAnimation left-[30%] top-[30%] -translate-x-[80%] -translate-y-[50%]"
           initial={{ scale: 0, opacity: 0 }}
@@ -209,7 +209,7 @@ const Home = () => {
           <img src={homeLogo} alt="" />
         </div> */}
         <motion.h2
-          className="text-2xl px-4 font-[300] !leading-[36px] sm:!leading-[48px] text-center sm:text-4xl  tracking-[0.1rem] lg:w-[80%] max-w-[58rem]"
+          className="text-2xl px-4 font-[300] !leading-[36px] sm:!leading-[48px] text-center sm:text-3xl  tracking-[0.1rem] lg:w-[80%] max-w-[58rem]"
           initial="hidden"
           animate="show"
           variants={fadeIn("right", "ease", 1.8, 1)}
@@ -219,14 +219,13 @@ const Home = () => {
           >Hello, I'm Virender. </span>
           I'm a <span
             className="font-semibold"
-          >full-stack developer
-            </span> with <span
-              className="font-semibold"
-            >2 years
-              </span> of experience. I enjoy building sites & apps. My focus is on <span
+          >full-stack developer (MERN).
+            </span> I enjoy building sites & apps. My focus is on <span
                 className="font-semibold"
-              >React (Next.js).</span>
+              >React (Next.js), Node.js, Express.js and MongoDB.</span> <br />
+              <span className="sm:text-2xl">Currently working as a RPA Developer at Deloitte.</span>
         </motion.h2>
+
         <motion.p
           className="text-rich-black-700 text-base md:text-xl dark:text-rich-black-400 sm:max-w-[550px] text-center"
           initial="hidden"
